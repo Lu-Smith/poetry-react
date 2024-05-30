@@ -4,7 +4,11 @@ import styled from 'styled-components';
 const HeaderContainer = styled.div`
   background-color: black;
   color: pink;
-
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 `;
 
 const Title = styled.h1`
@@ -14,11 +18,17 @@ const Title = styled.h1`
 const ModeContainer = styled.div`
   background-color: red;
   color: green;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 `;
 
 const ModeButton = styled.button`
   background-color: red;
   color: green;
+  cursor: pointer;
+  padding: 5px 10px;
 `;
 
 
