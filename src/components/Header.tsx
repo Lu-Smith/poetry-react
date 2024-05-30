@@ -6,9 +6,26 @@ const HeaderContainer = styled.div`
   color: pink;
 `;
 
+const Title = styled.div`
+  color: yellow;
+`;
+
+const ModeContainer = styled.div`
+  background-color: red;
+  color: green;
+`;
+
+
 const Header = () => {
   return (
-    <HeaderContainer>Header</HeaderContainer>
+    <HeaderContainer>
+      <Title>
+        Scottish Poetry
+      </Title>
+      <ModeContainer>
+        Mode
+      </ModeContainer>
+    </HeaderContainer>
   )
 }
 
