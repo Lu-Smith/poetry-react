@@ -2,22 +2,26 @@ import React from 'react';
 import styled from 'styled-components';
 
 const HeaderContainer = styled.div`
-  background-color: black;
-  color: pink;
+  background-color: #5b446a;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   gap: 10px;
   padding: 10px;
+  width: 100vw;
 `;
 
 const Title = styled.h1`
-  color: yellow;
+  color: #feffdf;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: #7dd87d;
+  }
 `;
 
 const ModeContainer = styled.div`
-  color: green;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -25,16 +29,16 @@ const ModeContainer = styled.div`
 `;
 
 const ModeButton = styled.button`
-  background-color: red;
-  color: green;
+  background-color: #7dd87d;
+  color: #283739;
   cursor: pointer;
   padding: 5px 10px;
   border-radius: 5px;
   transition: all 0.3s ease;
 
   &:hover {
-    color: lightcoral;
-    background-color: white;
+    color: #feffdf;
+    background-color: #4c9173;
   }
 `;
 
