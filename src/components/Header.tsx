@@ -51,10 +51,14 @@ const Header = () => {
       </Title>
       <ModeContainer>
         <ModeButton>
-          Light
+          <span className="material-symbols-outlined">
+            emoji_objects
+          </span>
         </ModeButton>
         <ModeButton>
-          Dark
+          <span className="material-symbols-outlined">
+            nightlight
+          </span>
         </ModeButton>
       </ModeContainer>
     </HeaderContainer>
