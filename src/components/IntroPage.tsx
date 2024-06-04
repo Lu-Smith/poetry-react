@@ -2,7 +2,7 @@ import React from 'react'
 
 const IntroPage = () => {
   return (
-    <div>IntroPage</div>
+    <h2>Welcome to the <span>💗</span> of <span>Scottish Poetry</span> - welcome home.</h2>
   )
 }
 
