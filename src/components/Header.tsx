@@ -30,14 +30,12 @@ const ModeContainer = styled.div`
 
 const ModeButton = styled.button`
   background-color: #4c9173;
-  color: #feffdf;
   cursor: pointer;
   padding: 5px 10px;
   border-radius: 5px;
   transition: all 0.3s ease;
 
   &:hover {
-    color: #283739;
     background-color: #7dd87d;
   }
 `;
