@@ -10,3 +10,17 @@ body {
   font-family: "Roboto", sans-serif;
   letter-spacing: 1px;
 }
+
+span {
+  color: #906387;
+  font-size: 2rem;
+}
+
+.material-symbols-outlined {
+  color: #feffdf;
+}
+
+.material-symbols-outlined:hover {
+  color: #283739;
+}
+
