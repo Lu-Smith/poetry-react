@@ -10,6 +10,7 @@ const HeaderContainer = styled.div`
   gap: 10px;
   padding: 10px;
   width: 100vw;
+  z-index: 99;
 `;
 
 const Title = styled.h1`
