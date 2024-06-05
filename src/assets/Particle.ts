@@ -1,3 +1,8 @@
+interface Mouse {
+    x: number | undefined;
+    y: number | undefined;
+  }
+
 export default class Particle {
     x: number;
     y: number;
@@ -13,6 +18,11 @@ export default class Particle {
         this.speedX = Math.random() * 3 - 1.5;
         this.speedY = Math.random() * 3 - 1.5;
         this.color = `hsl(${hue}, 100%, 50%)`;
+    }
+    update() {
+        this.x += this.speedX;
+        this.y += this.speedY;
+        if (this.size > 0.2) this.size -= 0.1;
     }
     draw(ctx: CanvasRenderingContext2D) {
         ctx.fillStyle = this.color;
