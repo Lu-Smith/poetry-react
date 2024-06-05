@@ -13,6 +13,7 @@ const FooterContainer = styled.div`
   font-size: 16px;
   text-align: center;
   width: 100vw;
+  z-index: 99;
 `;
 
 const StyledLink = styled.a`
