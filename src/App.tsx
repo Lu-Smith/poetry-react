@@ -4,7 +4,6 @@ import IntroPage from './components/IntroPage';
 import styled from 'styled-components';
 
 const MainContainer = styled.div`
-  background-color: #feffdf;
   color: #5b446a;
   display: flex;
   flex-direction: column;
