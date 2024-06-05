@@ -1,7 +1,20 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
+import Effect from '../assets/Effect';
 
 const IntroPage = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+
+    const effect = new Effect(canvas, ctx);
+    
+  }, []);
+
 
   return (
     <>
