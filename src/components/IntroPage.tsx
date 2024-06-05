@@ -63,7 +63,7 @@ const IntroPage: React.FC = () => {
         particle.draw(ctx);
       });
 
-      setHue((prevHue) => prevHue + 1);
+      setHue((prevHue) => prevHue + 0.5);
       requestAnimationFrame(animate);
     };
 
