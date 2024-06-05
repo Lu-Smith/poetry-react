@@ -1,4 +1,4 @@
-interface Mouse {
+export interface Mouse {
     x: number | undefined;
     y: number | undefined;
   }
@@ -14,10 +14,10 @@ export default class Particle {
     constructor(mouse: Mouse, hue: number) {
         this.x = mouse.x || 0;
         this.y = mouse.y || 0;
-        this.size = Math.random() * 20 + 1;
+        this.size = Math.random() * 40 + 1;
         this.speedX = Math.random() * 3 - 1.5;
         this.speedY = Math.random() * 3 - 1.5;
-        this.color = `hsl(${hue}, 100%, 50%)`;
+        this.color = `hsl(${hue}, 50%, 70%)`;
     }
     update() {
         this.x += this.speedX;
@@ -26,8 +26,6 @@ export default class Particle {
     }
     draw(ctx: CanvasRenderingContext2D) {
         ctx.fillStyle = this.color;
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fill();
+        ctx.fillRect(this.x, this.y, this.size, this.size);
     }
 }
