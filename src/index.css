@@ -16,6 +16,10 @@ span {
   font-size: 2rem;
 }
 
+h2 {
+  z-index: 2;
+}
+
 .material-symbols-outlined {
   color: #feffdf;
 }
@@ -31,6 +35,6 @@ span {
   position: absolute;
   left: 0;
   top: 0;
-  /* z-index: -1; */
+  z-index: 1;
 }
 
