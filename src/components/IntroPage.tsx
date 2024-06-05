@@ -12,6 +12,14 @@ const IntroPage = () => {
     if (!ctx) return;
 
     const effect = new Effect(canvas, ctx);
+
+    const animate = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      effect.render();
+      requestAnimationFrame(animate);
+    };
+
+    animate();
     
   }, []);
 
