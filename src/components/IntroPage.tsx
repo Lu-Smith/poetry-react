@@ -1,8 +1,16 @@
-import React, { useEffect, useRef } from 'react';
-import Effect from '../assets/Effect';
+import React, { useEffect, useRef, useState } from 'react';
+import Particle from '../assets/Particle';
 
-const IntroPage = () => {
+interface Mouse {
+  x: number | undefined;
+  y: number | undefined;
+}
+
+const IntroPage: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const [particlesArray, setParticlesArray] = useState<Particle[]>([]);
+  const hueRef = useRef(0);
+  const mouse = useRef<Mouse>({ x: undefined, y: undefined });
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -11,15 +19,27 @@ const IntroPage = () => {
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    const effect = new Effect(canvas, ctx);
+    const resizeCanvas = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    };
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
 
-    const animate = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      effect.render();
-      requestAnimationFrame(animate);
+    const addParticles = (event: MouseEvent) => {
+      mouse.current.x = event.x;
+      mouse.current.y = event.y;
+      for (let i = 0; i < 10; i++) {
+        setParticlesArray(prevParticles => [
+          ...prevParticles,
+          new Particle(mouse.current, hueRef.current),
+        ]);
+      }
     };
 
-    animate();
+    const handleClick = (event: MouseEvent) => addParticles(event);
+
+    canvas.addEventListener('click', handleClick);
     
   }, []);
 
