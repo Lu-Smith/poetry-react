@@ -7,6 +7,32 @@ const IntroPage: React.FC = () => {
   const [color, setColor] = useState('#53a8b6')
   const mouse = useRef<Mouse>({ x: undefined, y: undefined });
 
+  function handleParticle(ctx: CanvasRenderingContext2D) {
+    for ( let i = 0; i < particlesArray.length; i++) {
+        particlesArray[i].update();
+        particlesArray[i].draw(ctx);
+        for ( let j = i; j < particlesArray.length; j++) {
+            const dx = particlesArray[i].x - particlesArray[j].x;
+            const dy = particlesArray[i].y - particlesArray[j].y;
+            const distance = Math.sqrt(dx * dx + dy * dy);
+            if ( distance < 200) {
+                ctx.beginPath();
+                ctx.strokeStyle = particlesArray[i].color;
+                ctx.lineWidth = 2;
+                ctx.moveTo(particlesArray[i].x, particlesArray[i].y);
+                ctx.lineTo(particlesArray[j].x, particlesArray[j].y);
+                ctx.stroke();
+                ctx.closePath();
+            }
+        }
+        if (particlesArray[i].size <= 0.3) {
+            particlesArray.splice(i, 1);
+            i--;
+        }
+    }
+}
+
+
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -58,6 +84,7 @@ const IntroPage: React.FC = () => {
 
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
+      handleParticle(ctx);
       particlesArray.forEach((particle) => {
         particle.update();
         particle.draw(ctx);
