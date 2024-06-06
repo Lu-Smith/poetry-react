@@ -2,10 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 
 const FooterContainer = styled.div`
-  background-color: #906387;
-  color: #7dd87d;
+  background-color: #ffffff;
+  color: #53a8b6;
   padding: 20px;
-  border-top: 2px solid #7dd87d;
+  border-top: 3px solid #53a8b6;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,12 +17,12 @@ const FooterContainer = styled.div`
 `;
 
 const StyledLink = styled.a`
-  color: #feffdf;
+  color: #5585b5;
   text-decoration: none;
   transition: color 0.3s ease;
 
   &:hover {
-    color: #7dd87d;
+    color: #53a8b6;
   }
 `;
 
