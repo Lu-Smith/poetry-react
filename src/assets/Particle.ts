@@ -11,13 +11,13 @@ export default class Particle {
     speedY: number;
     color: string;
 
-    constructor(mouse: Mouse, hue: number) {
+    constructor(mouse: Mouse, color: string) {
         this.x = mouse.x || 0;
         this.y = mouse.y || 0;
         this.size = Math.random() * 40 + 1;
         this.speedX = Math.random() * 3 - 1.5;
         this.speedY = Math.random() * 3 - 1.5;
-        this.color = `hsl(${hue}, 50%, 70%)`;
+        this.color = color;
     }
     update() {
         this.x += this.speedX;
