@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const HeaderContainer = styled.div`
-  background-color: #5b446a;
+  background-color: #53a8b6;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -14,7 +14,7 @@ const HeaderContainer = styled.div`
 `;
 
 const Title = styled.h1`
-  color: #feffdf;
+  color: #ffffff;
   transition: all 0.3s ease;
 
   &:hover {
@@ -30,14 +30,15 @@ const ModeContainer = styled.div`
 `;
 
 const ModeButton = styled.button`
-  background-color: #4c9173;
+  background-color: #5585b5;
   cursor: pointer;
   padding: 5px 10px;
+  border: 2px solid #79c2d0;
   border-radius: 5px;
   transition: all 0.3s ease;
 
   &:hover {
-    background-color: #7dd87d;
+    background-color: #79c2d0;
   }
 `;
 
