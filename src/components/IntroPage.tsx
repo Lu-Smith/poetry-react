@@ -70,11 +70,13 @@ const IntroPage: React.FC = () => {
     animate();
   }, [particlesArray]);
 
+  
+
  
   return (
     <>
       <canvas ref={canvasRef}  id="canvas1"></canvas>
-      <h2>Welcome to the <span>💗</span> of <span>Scottish Poetry</span> - welcome home.</h2>
+      <h2>Welcome to the <span>💙</span> of <span>Scottish Poetry</span>. Welcome home.</h2>
     </>
   )
 }
