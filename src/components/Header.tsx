@@ -43,7 +43,7 @@ const ModeButton = styled.button`
 `;
 
 
-const Header = () => {
+const Header: React.FC = () => {
   return (
     <HeaderContainer>
       <Title>
