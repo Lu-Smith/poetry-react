@@ -26,7 +26,7 @@ const StyledLink = styled.a`
   }
 `;
 
-const Footer = () => {
+const Footer: React.FC = () => {
   return (
     <FooterContainer>
       <h3>
