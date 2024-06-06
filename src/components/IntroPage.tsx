@@ -4,7 +4,7 @@ import Particle, { Mouse } from '../assets/Particle';
 const IntroPage: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [particlesArray, setParticlesArray] = useState<Particle[]>([]);
-  const [hue, setHue] = useState(0);
+  const [color, setColor] = useState('#53a8b6')
   const mouse = useRef<Mouse>({ x: undefined, y: undefined });
 
   useEffect(() => {
@@ -27,7 +27,7 @@ const IntroPage: React.FC = () => {
       mouse.current.y = event.y;
       setParticlesArray((prev) => [
         ...prev,
-        new Particle(mouse.current, hue),
+        new Particle(mouse.current, color),
       ]);
     };
 
@@ -36,7 +36,7 @@ const IntroPage: React.FC = () => {
       mouse.current.y = event.y;
       setParticlesArray((prev) => [
         ...prev,
-        new Particle(mouse.current, hue),
+        new Particle(mouse.current, color),
       ]);
     };
 
@@ -49,7 +49,7 @@ const IntroPage: React.FC = () => {
       canvas.removeEventListener('mousemove', handleMouseMove);
     };
     
-  }, [hue]);
+  }, [color]);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -63,7 +63,16 @@ const IntroPage: React.FC = () => {
         particle.draw(ctx);
       });
 
-      setHue((prevHue) => prevHue + 0.5);
+      if (mouse.current.x && mouse.current.y) {
+        if (mouse.current.x < mouse.current.y) {
+            setColor('#53a8b6')
+        } else if (mouse.current.x > mouse.current.y * 2.3) {
+            setColor('#5585b5')
+        } else {
+          setColor('#ffffff')
+        }
+      }
+      
       requestAnimationFrame(animate);
     };
 
