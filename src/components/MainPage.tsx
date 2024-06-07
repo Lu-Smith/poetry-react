@@ -1,8 +1,12 @@
-import React from 'react'
+import React from 'react';
 
-const MainPage: React.FC = () => {
+interface Props {
+    mode: boolean,
+}
+
+const MainPage: React.FC<Props> = ({mode}) => {
   return (
-    <div>MainPage</div>
+    <div className={mode ? "light" : ""}>MainPage</div>
   )
 }
 
