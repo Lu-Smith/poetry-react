@@ -30,6 +30,10 @@ h2 {
   color: #5585b5;
 }
 
+.heart {
+  font-size: 3rem;
+}
+
 #canvas1 {
   background: #e5f6f9;
   width: 100%;
