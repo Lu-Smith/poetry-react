@@ -2,6 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 import { motion } from "framer-motion";
 
+interface Props {
+  mode: boolean,
+}
+
 const FooterContainer = styled.div`
   background-color: #ffffff;
   color: #53a8b6;
@@ -14,6 +18,11 @@ const FooterContainer = styled.div`
   width: 100vw;
   z-index: 99;
   gap: 5px;
+
+  &.light {
+    color: rgb(181, 86, 86);
+    border-top: 3px solid rgb(181, 86, 86);
+  }
 `;
 
 const StyledLink = styled.a`
@@ -22,13 +31,17 @@ const StyledLink = styled.a`
   transition: color 0.3s ease;
 
   &:hover {
-    color: #53a8b6;
+    color: #F3AD61;
+  }
+
+  .light &:hover {
+    color: #9d2214;
   }
 `;
 
-const Footer: React.FC = () => {
+const Footer: React.FC<Props> = ({mode}) => {
   return (
-    <FooterContainer>
+    <FooterContainer className={mode ? "light" : ""}>
       <motion.h3
         initial={{ translateY: 100, scale: 0.5 }}
         animate={{ translateY: 0, scale: 1 }}
