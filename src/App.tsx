@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import IntroPage from './components/IntroPage';
@@ -15,11 +16,17 @@ const MainContainer = styled.div`
 `;
 
 function App() {
+  const [mode, setMode] = useState(false);
+
+  const toggleMode = () => {
+    setMode(prev => !prev);
+  };
+
   return (
-    <MainContainer>
-      <Header />
-      <IntroPage />
-      <Footer />
+    <MainContainer className={mode ? "light" : ""}>
+      <Header mode = {mode} toggleMode = {toggleMode} />
+      <IntroPage mode = {mode} />
+      <Footer mode = {mode} />
     </MainContainer>
   )
 }
