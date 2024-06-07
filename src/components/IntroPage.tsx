@@ -114,12 +114,22 @@ const IntroPage: React.FC<Props> = ({mode}) => {
       });
 
       if (mouse.current.x && mouse.current.y) {
-        if (mouse.current.x < mouse.current.y) {
-            setColor('#53a8b6')
-        } else if (mouse.current.x > mouse.current.y * 2.3) {
+        if (mode) {
+          if (mouse.current.x < mouse.current.y) {
+            setColor('rgb(181, 86, 86)')
+          } else if (mouse.current.x > mouse.current.y * 2.3) {
             setColor('#5585b5')
+          } else {
+            setColor('#ffffff')
+          }
         } else {
-          setColor('#ffffff')
+          if (mouse.current.x < mouse.current.y) {
+            setColor('#53a8b6')
+          } else if (mouse.current.x > mouse.current.y * 2.3) {
+              setColor('#5585b5')
+          } else {
+            setColor('#ffffff')
+          }
         }
       }
       
