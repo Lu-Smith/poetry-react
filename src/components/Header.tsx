@@ -84,7 +84,7 @@ const Header: React.FC<Props> = ({mode, toggleMode}) => {
         Scottish Poetry
       </Title>
       <ModeContainer className={mode ? "light" : ""}>
-        {mode ? 
+        {!mode ? 
         <ModeButton onClick={toggleMode} className={mode ? "light" : ""}>
           <span className="material-symbols-outlined">
             emoji_objects
