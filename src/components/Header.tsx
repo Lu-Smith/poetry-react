@@ -14,11 +14,11 @@ const HeaderContainer = styled.div`
 `;
 
 const Title = styled.h1`
-  color: #ffffff;
+  color: #484c4d;
   transition: all 0.3s ease;
 
   &:hover {
-    color: #7dd87d;
+    color: #ffffff;
   }
 `;
 
