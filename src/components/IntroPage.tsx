@@ -11,6 +11,10 @@ const TitleContainer = styled.div`
   align-items: center;
   justify-content: center;
   gap: 10px;
+
+  @media screen and (max-width: 786px) {
+    flex-direction: column;
+  }
 `;
 
 const IntroPage: React.FC = () => {
