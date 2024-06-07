@@ -3,6 +3,10 @@ import Particle, { Mouse } from '../assets/Particle';
 import { motion } from "framer-motion";
 import styled from 'styled-components';
 
+interface Props {
+  mode: boolean,
+}
+
 const TitleContainer = styled.div`
   width: 100%;
   z-index: 1;
@@ -17,7 +21,7 @@ const TitleContainer = styled.div`
   }
 `;
 
-const IntroPage: React.FC = () => {
+const IntroPage: React.FC<Props> = ({mode}) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [particlesArray, setParticlesArray] = useState<Particle[]>([]);
   const [color, setColor] = useState('#53a8b6')
@@ -130,8 +134,8 @@ const IntroPage: React.FC = () => {
  
   return (
     <>
-      <canvas ref={canvasRef}  id="canvas1"></canvas>
-      <TitleContainer>
+      <canvas ref={canvasRef}  id="canvas1" className={mode ? "light" : ""}></canvas>
+      <TitleContainer className={mode ? "light" : ""}>
         <motion.h2 
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
