@@ -5,7 +5,6 @@ import styled from 'styled-components';
 
 const TitleContainer = styled.div`
   width: 100%;
-  text-align: center;
   z-index: 1;
   display: flex;
   flex-direction: row;
@@ -31,7 +30,7 @@ const IntroPage: React.FC = () => {
             if ( distance < 200) {
                 ctx.beginPath();
                 ctx.strokeStyle = particlesArray[i].color;
-                ctx.lineWidth = 2;
+                ctx.lineWidth = 1;
                 ctx.moveTo(particlesArray[i].x, particlesArray[i].y);
                 ctx.lineTo(particlesArray[j].x, particlesArray[j].y);
                 ctx.stroke();
@@ -64,10 +63,13 @@ const IntroPage: React.FC = () => {
     const handleClick = (event: MouseEvent) => {
       mouse.current.x = event.x;
       mouse.current.y = event.y;
-      setParticlesArray((prev) => [
-        ...prev,
-        new Particle(mouse.current, color),
-      ]);
+      for (let i = 0; i < 10; i++) {
+        setParticlesArray((prev) => [
+          ...prev,
+          new Particle(mouse.current, color),
+        ]);
+      }
+      
     };
 
     const handleMouseMove = (event: MouseEvent) => {
@@ -131,23 +133,22 @@ const IntroPage: React.FC = () => {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}>
           Welcome to the 
-          </motion.h2>
-          <motion.div 
+        </motion.h2>
+        <motion.div 
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 2 }}
           className='heart'>
-          💙
-          </motion.div> 
-          <motion.h2
+          🧡
+        </motion.div> 
+        <motion.h2
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 2 }}>
           of 
           <span> Scottish Poetry 🪶</span>
         </motion.h2>
-        </TitleContainer>
-   
+      </TitleContainer>
       <motion.h2 
       initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
