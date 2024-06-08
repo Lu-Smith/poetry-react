@@ -18,6 +18,8 @@ const FooterContainer = styled.div`
   width: 100vw;
   z-index: 99;
   gap: 5px;
+  position: fixed;
+  bottom: 0;
 
   &.light {
     color: rgb(181, 86, 86);
