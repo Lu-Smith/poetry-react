@@ -1,6 +1,7 @@
 import React from 'react';
 import { ButtonStyle } from '../styles/Button';
 import Poem from './Poem';
+import poems from '../assets/poems';
 
 interface Props {
     mode: boolean,
@@ -15,9 +16,10 @@ const MainPage: React.FC<Props> = ({mode, toggleHome}) => {
           home
         </span>
       </ButtonStyle>
-      <Poem mode = {mode} />
+        {Object.keys(poems).map(poemKey => (
+          <Poem key={poemKey} mode={mode} poem={poems[poemKey]} />
+        ))}
     </>
-    
   )
 }
 
