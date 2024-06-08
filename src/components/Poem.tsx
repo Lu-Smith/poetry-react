@@ -3,6 +3,11 @@ import styled from 'styled-components';
 
 interface Props {
     mode: boolean,
+    poem: {
+      title: string;
+      author: string;
+      lines: string[];
+  };
 }
 
 const PoemContainer = styled.div`
@@ -15,6 +20,9 @@ const PoemContainer = styled.div`
   gap: 10px;
   z-index: 99;
   background-color: rgba(0, 0, 0, 0.5);
+  position: relative;
+  top: 100px;
+  padding: 40px 20px;
 
   &.light {
     background-color: rgba(250, 250, 250, 0.8);
@@ -33,24 +41,21 @@ const PoemContainer = styled.div`
   }
 `;
 
-const Poem: React.FC<Props> = ({mode}) => {
+const Line = styled.h3`
+  margin: 0;
+  text-align: center;
+`;
+
+const Poem: React.FC<Props> = ({mode, poem}) => {
+
   return (
     <PoemContainer className={mode ? "light" : ""}>
-        <h2>The Duel Dance</h2>
+        <h2>{poem.title}</h2>
         <br/>
-        <h3>Tolerance is a wee brave heart,</h3>
-        <h3>A fool’s wisdom, a keen-edged dart.</h3>
-        <h3>It’s laughing through a tear-stained eye,</h3>
-        <h3>A thorn that helps the rose grow high.</h3>
-        <h3>Tolerance is cruel kindness,</h3>
-        <h3>A jest that heals and hurts.</h3>
-        <h3>It’s peace among the warring sharks,</h3>
-        <h3>Where the meek rise from the dirt.</h3>
-        <h3>Tolerance is the comedy of strife,</h3>
-        <h3>The dance of love and pain.</h3>
-        <h3>A fire that sometimes fuels the fight,</h3>
-        <h3>Yet soothes the heart again.</h3>
-        <h4>Humanlist</h4>
+        {poem.lines.map((line: string, index: number) => (
+          <Line key={index}>{line}</Line>
+        ))}
+        <h4>{poem.author}</h4>
     </PoemContainer>
   )
 }
