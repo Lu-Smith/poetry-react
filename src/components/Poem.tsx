@@ -6,15 +6,30 @@ interface Props {
 }
 
 const PoemContainer = styled.div`
-  width: 80%;
+  width: 50%;
+  height: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 10px;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  &.light {
+    background-color: rgba(250, 250, 250, 0.8);
+  }
+
+  @media screen and (max-width: 120px) {
+    width: 80%;
+  }
 
   @media screen and (max-width: 786px) {
-    flex-direction: column;
+    width: 90%;
+  }
+
+  @media screen and (max-width: 480px) {
+    width: 100%;
   }
 `;
 
