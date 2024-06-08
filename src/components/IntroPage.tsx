@@ -2,10 +2,20 @@ import React, { useEffect, useRef, useState } from 'react';
 import Particle, { Mouse } from '../assets/Particle';
 import MainPage from './MainPage';
 import Intro from './Intro';
+import styled from 'styled-components';
 
 interface Props {
   mode: boolean,
 }
+
+const IntroPageContainer = styled.div`
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+`;
 
 const IntroPage: React.FC<Props> = ({mode}) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -134,14 +144,14 @@ const IntroPage: React.FC<Props> = ({mode}) => {
 
  
   return (
-    <>
+    <IntroPageContainer>
       <canvas ref={canvasRef}  id="canvas1" className={mode ? "light" : ""}></canvas>
       {poems ? 
         <MainPage mode = {mode} toggleHome = {toggleHome} />
         :
         <Intro mode = {mode} toggleHome = {toggleHome} />
       }
-    </>
+    </IntroPageContainer>
   )
 }
 
