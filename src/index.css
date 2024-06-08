@@ -51,6 +51,23 @@ h2 {
 
 h3 {
   font-size: 0.9rem;
+  color: #e7dede;
+}
+
+.light h2 {
+  color: #5585b5;
+}
+
+.light h3, .light h4 {
+  color: #9d2214;
+}
+
+h4 {
+  color: #e7dede;
+  font-size: 0.7rem;
+  font-style: italic;
+  position: relative;
+  right: -40px;
 }
 
 .material-symbols-outlined {
