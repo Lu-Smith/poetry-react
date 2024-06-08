@@ -36,8 +36,20 @@ const PoemContainer = styled.div`
 const Poem: React.FC<Props> = ({mode}) => {
   return (
     <PoemContainer className={mode ? "light" : ""}>
-        <h2>Title</h2>
-        <h3>Poem</h3>
+        <h2>The Duel Dance</h2>
+        <br/>
+        <h3>Tolerance is a wee brave heart,</h3>
+        <h3>A fool’s wisdom, a keen-edged dart.</h3>
+        <h3>It’s laughing through a tear-stained eye,</h3>
+        <h3>A thorn that helps the rose grow high.</h3>
+        <h3>Tolerance is cruel kindness,</h3>
+        <h3>A jest that heals and hurts.</h3>
+        <h3>It’s peace among the warring sharks,</h3>
+        <h3>Where the meek rise from the dirt.</h3>
+        <h3>Tolerance is the comedy of strife,</h3>
+        <h3>The dance of love and pain.</h3>
+        <h3>A fire that sometimes fuels the fight,</h3>
+        <h3>Yet soothes the heart again.</h3>
         <h4>Humanlist</h4>
     </PoemContainer>
   )
