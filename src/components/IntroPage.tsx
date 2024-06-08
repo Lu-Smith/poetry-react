@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import Particle, { Mouse } from '../assets/Particle';
 import { motion } from "framer-motion";
 import styled from 'styled-components';
+import { ButtonStyle } from '../styles/Button';
 
 interface Props {
   mode: boolean,
@@ -20,6 +21,7 @@ const TitleContainer = styled.div`
     flex-direction: column;
   }
 `;
+
 
 const IntroPage: React.FC<Props> = ({mode}) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -173,6 +175,9 @@ const IntroPage: React.FC<Props> = ({mode}) => {
       transition={{ duration: 1.1 }}>
         Welcome home🪶
       </motion.h2>
+      <ButtonStyle className={mode ? "light" : ""}>
+        Poems
+      </ButtonStyle>
     </>
   )
 }
