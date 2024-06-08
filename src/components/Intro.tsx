@@ -10,12 +10,14 @@ interface Props {
 
 const TitleContainer = styled.div`
   width: 100%;
+  height: 30vh;
   z-index: 1;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 10px;
+  margin-top: 10%;
 
   @media screen and (max-width: 786px) {
     flex-direction: column;
