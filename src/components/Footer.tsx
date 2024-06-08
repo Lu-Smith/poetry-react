@@ -7,7 +7,7 @@ interface Props {
 }
 
 const FooterContainer = styled.div`
-  background-color: #ffffff;
+  background-color: #393e46;
   color: #53a8b6;
   padding: 20px;
   border-top: 3px solid #53a8b6;
@@ -22,6 +22,7 @@ const FooterContainer = styled.div`
   &.light {
     color: rgb(181, 86, 86);
     border-top: 3px solid rgb(181, 86, 86);
+    background-color: #ffffff;
   }
 `;
 
