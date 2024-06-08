@@ -3,7 +3,6 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 import IntroPage from './components/IntroPage';
 import styled from 'styled-components';
-import MainPage from './components/MainPage';
 
 const MainContainer = styled.div`
   color: #5b446a;
@@ -26,7 +25,6 @@ function App() {
   return (
     <MainContainer className={mode ? "light" : ""}>
       <Header mode = {mode} toggleMode = {toggleMode} />
-      <MainPage mode = {mode} />
       <IntroPage mode = {mode} />
       <Footer mode = {mode} />
     </MainContainer>
