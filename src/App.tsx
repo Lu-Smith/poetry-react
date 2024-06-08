@@ -6,13 +6,13 @@ import styled from 'styled-components';
 
 const MainContainer = styled.div`
   color: #5b446a;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
   height: 100vh;
   width: 100vw;
+  background-color: #2c3031;
+
+  &.light {
+    background-color: rgb(235, 196, 196);
+  }
 `;
 
 function App() {
