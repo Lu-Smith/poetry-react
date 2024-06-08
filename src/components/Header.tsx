@@ -16,6 +16,8 @@ const HeaderContainer = styled.div`
   padding: 10px;
   width: 100vw;
   z-index: 99;
+  position: fixed;
+  top: 0;
 
   &.light {
     background-color: #ffffff;
