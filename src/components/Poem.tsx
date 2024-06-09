@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { motion } from "framer-motion";
 
 interface Props {
     mode: boolean,
@@ -25,6 +26,14 @@ const PoemContainer = styled.div`
 
   &.light {
     background-color: rgba(250, 250, 250, 0.8);
+
+    h2 {
+      color: black;
+    }
+  }
+
+  h2 {
+    color: #F3AD61;
   }
 
   @media screen and (max-width: 120px) {
@@ -48,14 +57,21 @@ const Line = styled.h3`
 const Poem: React.FC<Props> = ({mode, poem}) => {
 
   return (
-    <PoemContainer className={mode ? "light" : ""}>
-        <h2>{poem.title}</h2>
-        <br/>
-        {poem.lines.map((line: string, index: number) => (
-          <Line key={index}>{line}</Line>
-        ))}
-        <h4>{poem.author}🪶</h4>
-    </PoemContainer>
+      <PoemContainer className={mode ? "light" : ""}>
+          <h2>{poem.title}</h2>
+          <br/>
+          {poem.lines.map((line: string, index: number) => (
+             <motion.div
+              key={index}
+              initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <Line>{line}</Line>
+            </motion.div>
+          ))}
+          <h4>{poem.author}🪶</h4>
+      </PoemContainer>
   )
 }
 
