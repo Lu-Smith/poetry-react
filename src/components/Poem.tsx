@@ -11,8 +11,6 @@ interface Props {
 }
 
 const PoemContainer = styled.div`
-  width: 50%;
-  height: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,6 +21,7 @@ const PoemContainer = styled.div`
   position: relative;
   top: 100px;
   padding: 40px 20px;
+  border-radius: 5px;
 
   &.light {
     background-color: rgba(250, 250, 250, 0.8);
@@ -55,7 +54,7 @@ const Poem: React.FC<Props> = ({mode, poem}) => {
         {poem.lines.map((line: string, index: number) => (
           <Line key={index}>{line}</Line>
         ))}
-        <h4>{poem.author}</h4>
+        <h4>{poem.author}🪶</h4>
     </PoemContainer>
   )
 }
