@@ -111,6 +111,12 @@ button.light .material-symbols-outlined:hover {
   right: 11px;
 }
 
+.scroll {
+  z-index: 100;
+  position: fixed;
+  bottom: 70px;
+}
+
 @media screen and (max-width: 1200px) {
   h1 {
     font-size: 1.8rem;
