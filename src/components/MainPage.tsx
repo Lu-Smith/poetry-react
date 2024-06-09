@@ -3,7 +3,6 @@ import { ButtonStyle } from '../styles/Button';
 import Poem from './Poem';
 import poems from '../assets/poems';
 import styled from 'styled-components';
-import { motion } from "framer-motion";
 
 interface Props {
     mode: boolean,
@@ -35,15 +34,13 @@ const MainPage: React.FC<Props> = ({mode, toggleHome}) => {
         </span>
       </ButtonStyle>
       <PoemsContainer>
-        {Object.keys(poems).map(poemKey => (
-          <motion.div>
+        {Object.keys(poems).map((poemKey) => (
             <Poem key={poemKey} mode={mode} poem={poems[poemKey]} />
-          </motion.div>
           ))}
       </PoemsContainer>
       <ButtonStyle className={mode ? "light scroll" : "scroll"} onClick={toggleHome}>
         <span className="material-symbols-outlined">
-        stat_minus_2
+          stat_minus_2
         </span>
       </ButtonStyle>
     
