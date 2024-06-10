@@ -107,15 +107,10 @@ button.light .material-symbols-outlined:hover {
 
 .home {
   position: fixed;
-  top: 70px;
+  top: 0;
   right: 11px;
 }
 
-.scroll {
-  z-index: 100;
-  position: fixed;
-  bottom: 70px;
-}
 
 @media screen and (max-width: 1200px) {
   h1 {
