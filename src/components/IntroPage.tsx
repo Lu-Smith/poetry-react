@@ -26,7 +26,7 @@ const IntroPageContainer = styled.div`
     margin-top: 40px;
 
     button {
-    margin-top: 40px;
+    margin-top: 80px;
     }
   }
 `;
@@ -34,18 +34,18 @@ const IntroPageContainer = styled.div`
 const pageVariants = {
   initial: {
     opacity: 0,
-    x: '100vw',
-    y: '-100vh',
+    rotate: 90,
+    transformOrigin: 'top right',
   },
   in: {
     opacity: 1,
-    x: 0,
-    y: 0,
+    rotate: 0,
+    transformOrigin: 'top right',
   },
   out: {
     opacity: 0,
-    x: '-100vw',
-    y: '100vh',
+    rotate: -90,
+    transformOrigin: 'top right'
   },
 };
 
@@ -191,8 +191,7 @@ const IntroPage: React.FC<Props> = ({mode, toggleHome, poems}) => {
             <MainPage mode={mode} toggleHome={toggleHome} />
           </motion.div>
         ) : (
-          <div className='mainContainer'
-          >
+          <div className='mainContainer'>
             <Intro mode={mode} toggleHome={toggleHome} />
           </div>
         )}
