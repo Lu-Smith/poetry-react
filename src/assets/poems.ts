@@ -224,6 +224,110 @@ const poems: PoemsCollectionType = {
         'In its embrace, let your spirit leap.',
         'Isolation’s price is way too high.'
       ]
+    },
+    'Complex Void': {
+      title: 'Complex Void',
+      author: 'Humanlist',
+      lines: [
+        'Time says nothing,',
+        'yet my love remains resolute.',
+        'Time says nothing,',
+        'as I grow in strength and fortitude.',
+        '',
+        '',
+        'Time says nothing,',
+        'while I craft and execute.',
+        'Time says nothing,',
+        'as I conceal tears and confide.',
+        '',
+        '',
+        'Time says nothing,',
+        'for I fear no death, I love, I strive.',
+        'Time says nothing,',
+        'in eternal wanderlust, I hate and I thrive.'
+      ]
+    },
+    'Dreams of Sorrow': {
+      title: 'Dreams of Sorrow',
+      author: 'Humanlist',
+      lines: [
+        'About suffering, they were never wrong,',
+        'The Old Goddesses: how well they understood.',
+        '',
+        '',
+        'For the miracles of birth, there is blood and pain;',
+        'For the miracles of love, there are losses and hate.',
+        '',
+        '',
+        'For the miracles of evolution, the weak must perish;',
+        'For the miracles of comfort, nature\'s grave is cherished.',
+        '',
+        '',
+        'For the miracles of the web, isolation binds;',
+        'For the miracles of light, contamination blinds.',
+        '',
+        '',
+        'The ocean of life is never just black and white—',
+        'It flows in soothing blue, day and night.'
+      ]
+    },
+    'The Swan': {
+      title: 'The Swan',
+      author: 'Humanlist',
+      lines: [
+        'In the twilight of the ancient Norse,',
+        'Where legends breathe and myths endorse,',
+        'A swan emerged from the waters deep,',
+        'Guarding secrets the gods would keep.',
+        '',
+        '',
+        'Freyja, goddess of love and light,',
+        'Sent this swan in a cloak of white,',
+        'To dance upon the mirrored lake,',
+        'Where dreams are born, and sorrows break.',
+        '',
+        '',
+        'With feathers soft as winter\'s breath,',
+        'She soared above the realms of death,',
+        'A symbol pure, of life, renewed,',
+        'In her wings, all strength imbued.',
+        '',
+        '',
+        'A warrior lost, with the heart of stone,',
+        'By swan\'s enchantment was atoned,',
+        'In her reflection, he saw the past,',
+        'A love returned, and a spell was cast.'
+      ]
+    },
+    'The Guard': {
+      title: 'The Guard',
+      author: 'Humanlist',
+      lines: [
+        'In ancient times, upon the moor,',
+        'Where whispers of old battles soar,',
+        'There bloomed a flower, fierce and wild,',
+        'With prickly stem and purple crowned.',
+        '',
+        '',
+        'A tale the Scots hold close and dear,',
+        'Of warriors bold and hearts sincere,',
+        'Of how this humble, sturdy bloom,',
+        'Saved Scotland from impending doom.',
+        '',
+        '',
+        'The thistle, with its barbs so keen,',
+        'A silent sentry, sharp and mean,',
+        'Alerted clansmen, roused the fight,',
+        'And drove invaders into the night.',
+        '',
+        '',
+        'The thistle blooms on banners high,',
+        'In every heart, its roots run nigh,',
+        'A symbol of enduring grace,',
+        '',
+        '',
+        'In Scotland’s soul, it finds its place.'
+      ]
     }
   };
   
