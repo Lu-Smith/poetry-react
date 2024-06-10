@@ -31,7 +31,7 @@ const Intro: React.FC<Props> = ({mode, toggleHome}) => {
         <motion.h2 
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5 }}>
+        transition={{ duration: 1 }}>
           Welcome to the 
         </motion.h2>
         <motion.div 
@@ -44,7 +44,7 @@ const Intro: React.FC<Props> = ({mode, toggleHome}) => {
         <motion.h2
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 2 }}>
+          transition={{ duration: 2.5 }}>
           of 
           <span> Scottish Poetry 🪶</span>
         </motion.h2>
@@ -52,7 +52,7 @@ const Intro: React.FC<Props> = ({mode, toggleHome}) => {
       <motion.h2 
       initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 1.1 }}>
+      transition={{ duration: 1.5 }}>
         Welcome home🪶
       </motion.h2>
       <ButtonStyle className={mode ? "light" : ""} onClick={toggleHome}>
