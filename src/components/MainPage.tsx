@@ -26,6 +26,11 @@ const PoemsContainer = styled.div`
 `;
 
 const MainPage: React.FC<Props> = ({mode, toggleHome}) => {
+
+  const scrollToTheNextPoem = () => {
+    alert('next')
+  }
+
   return (
     <>
       <ButtonStyle className={mode ? "light home" : "home"} onClick={toggleHome}>
@@ -38,7 +43,7 @@ const MainPage: React.FC<Props> = ({mode, toggleHome}) => {
             <Poem key={poemKey} mode={mode} poem={poems[poemKey]} />
           ))}
       </PoemsContainer>
-      <ButtonStyle className={mode ? "light scroll" : "scroll"} onClick={toggleHome}>
+      <ButtonStyle className={mode ? "light scroll" : "scroll"} onClick={scrollToTheNextPoem}>
         <span className="material-symbols-outlined">
           stat_minus_2
         </span>
