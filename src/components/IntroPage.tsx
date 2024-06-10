@@ -7,6 +7,8 @@ import styled from 'styled-components';
 
 interface Props {
   mode: boolean,
+  toggleHome: () => void,
+  poems: boolean,
 }
 
 const IntroPageContainer = styled.div`
@@ -18,9 +20,9 @@ const IntroPageContainer = styled.div`
   gap: 20px;
 
   .mainContainer {
+    height: 100%;
     z-index: 99;
     text-align: center;
-    overflow-x: hidden;
     margin-top: 40px;
 
     button {
@@ -53,16 +55,11 @@ const pageTransition = {
   damping: 12,
 };
 
-const IntroPage: React.FC<Props> = ({mode}) => {
+const IntroPage: React.FC<Props> = ({mode, toggleHome, poems}) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [particlesArray, setParticlesArray] = useState<Particle[]>([]);
   const [color, setColor] = useState('#53a8b6')
   const mouse = useRef<Mouse>({ x: undefined, y: undefined });
-  const [poems, setPoems] = useState(false);
-
-  const toggleHome = () => {
-    setPoems(prev => !prev);
-  };
 
   useEffect(() => {
     const canvas = canvasRef.current;
