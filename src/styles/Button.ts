@@ -25,15 +25,15 @@ export const ButtonStyle = styled.button`
   }
 
   .light &:hover {
-  background-color: #ffffff;
-  color: rgb(235, 196, 196);
-  border: 2px solid rgb(235, 196, 196);
+    background-color: #ffffff;
+    color: rgb(235, 196, 196);
+    border: 2px solid rgb(235, 196, 196);
   }
 
   @media screen and (max-width: 786px) {
     padding: 5px 8px;
     border: 1px solid #79c2d0;
-    font-size: 0.3rem;
+    font-size: 0.7rem;
   }
 `;
 
