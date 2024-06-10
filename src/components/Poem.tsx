@@ -17,10 +17,10 @@ const PoemContainer = styled.div`
   align-items: center;
   justify-content: center;
   gap: 10px;
-  z-index: 99;
+  z-index: 98;
   background-color: rgba(0, 0, 0, 0.5);
   position: relative;
-  top: 100px;
+  top: 50px;
   padding: 60px 20px;
   border-radius: 5px;
   margin: 0;
@@ -36,18 +36,6 @@ const PoemContainer = styled.div`
   h2 {
     color: #F3AD61;
     font-style: italic;
-  }
-
-  @media screen and (max-width: 120px) {
-    width: 80%;
-  }
-
-  @media screen and (max-width: 786px) {
-    width: 90%;
-  }
-
-  @media screen and (max-width: 480px) {
-    width: 100%;
   }
 `;
 
@@ -66,7 +54,7 @@ const Poem: React.FC<Props> = ({mode, poem}) => {
              <motion.div
               key={index}
               initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              whileInView={{ opacity: 1, x: -20 }}
               transition={{ duration: 0.5 }}
             >
               <Line>{line}</Line>
