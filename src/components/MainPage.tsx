@@ -10,14 +10,14 @@ interface Props {
 }
 
 const PoemsContainer = styled.div`
-    width: 100%;
+    width: 99vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: start;
     gap: 40px;
-    overflow: scroll;
-    margin-bottom: 100px;
+    overflow: hidden;
+    margin-bottom: 200px;
 
     div {
       width: 60%;
@@ -26,10 +26,6 @@ const PoemsContainer = styled.div`
 `;
 
 const MainPage: React.FC<Props> = ({mode, toggleHome}) => {
-
-  const scrollToTheNextPoem = () => {
-    alert('next')
-  }
 
   return (
     <>
@@ -42,13 +38,7 @@ const MainPage: React.FC<Props> = ({mode, toggleHome}) => {
         {Object.keys(poems).map((poemKey) => (
             <Poem key={poemKey} mode={mode} poem={poems[poemKey]} />
           ))}
-      </PoemsContainer>
-      <ButtonStyle className={mode ? "light scroll" : "scroll"} onClick={scrollToTheNextPoem}>
-        <span className="material-symbols-outlined">
-          stat_minus_2
-        </span>
-      </ButtonStyle>
-    
+      </PoemsContainer>    
     </>
   )
 }
