@@ -10,7 +10,6 @@
 body {
   font-family: "Roboto", sans-serif;
   letter-spacing: 1px;
-  overflow: hidden;
 }
 
 span {
@@ -56,7 +55,7 @@ h3 {
 }
 
 .light h2 {
-  color: #5585b5;
+  color: #9d2214;
 }
 
 .light h3, .light h4 {
@@ -102,14 +101,34 @@ button.light .material-symbols-outlined:hover {
 }
 
 #canvas1.light {
-  background-color: rgb(235, 196, 196);
+  background-color: rgb(245, 223, 223);
 }
 
 .home {
   position: fixed;
   top: 0;
-  right: 11px;
+  left: 11px;
 }
+
+/* Scrollbar customization */
+&::-webkit-scrollbar {
+  width: 16px;
+}
+
+&::-webkit-scrollbar-track {
+  background: none;
+}
+
+&::-webkit-scrollbar-thumb {
+  background: #5585b5;
+  border-radius: 8px;
+}
+
+&::-webkit-scrollbar-thumb:hover {
+  background: #14274e;
+}
+
+
 
 
 @media screen and (max-width: 1200px) {
