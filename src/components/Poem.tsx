@@ -21,8 +21,9 @@ const PoemContainer = styled.div`
   background-color: rgba(0, 0, 0, 0.5);
   position: relative;
   top: 100px;
-  padding: 40px 20px;
+  padding: 60px 20px;
   border-radius: 5px;
+  margin: 0;
 
   &.light {
     background-color: rgba(250, 250, 250, 0.8);
@@ -34,6 +35,7 @@ const PoemContainer = styled.div`
 
   h2 {
     color: #F3AD61;
+    font-style: italic;
   }
 
   @media screen and (max-width: 120px) {
