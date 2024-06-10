@@ -3,7 +3,8 @@ import styled from 'styled-components';
 
 interface Props {
   mode: boolean,
-  toggleMode: () => void
+  toggleMode: () => void,
+  goHome: () => void,
 }
 
 const HeaderContainer = styled.div`
@@ -13,7 +14,7 @@ const HeaderContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   gap: 10px;
-  padding: 10px;
+  padding: 10px 22px;
   width: 100vw;
   z-index: 100;
   position: fixed;
@@ -79,11 +80,11 @@ const ModeButton = styled.button`
 `;
 
 
-const Header: React.FC<Props> = ({mode, toggleMode}) => {
+const Header: React.FC<Props> = ({mode, toggleMode, goHome}) => {
   return (
     <HeaderContainer className={mode ? "light" : ""}>
-      <Title className={mode ? "light" : ""}>
-        Scottish Poetry
+      <Title className={mode ? "light" : ""} onClick={goHome}>
+        Scottish Poetry 🪶
       </Title>
       <ModeContainer className={mode ? "light" : ""}>
         {!mode ? 
