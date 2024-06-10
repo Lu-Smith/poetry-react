@@ -10,18 +10,30 @@ interface Props {
 }
 
 const PoemsContainer = styled.div`
-    width: 99vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: start;
     gap: 40px;
-    overflow: hidden;
-    margin-bottom: 200px;
-
+    margin-bottom: 100px;
+    padding-bottom: 70px;
+    background: none;
+    
     div {
-      width: 60%;
+      width: 50vw;
       margin: 0 auto;
+     
+      @media screen and (max-width: 1200px) {
+        width: 60vw;
+      }
+
+      @media screen and (max-width: 786px) {
+        width: 80vw;
+      }
+
+      @media screen and (max-width: 480px) {
+        width: 100vw;
+      }
     }
 `;
 
@@ -36,9 +48,9 @@ const MainPage: React.FC<Props> = ({mode, toggleHome}) => {
       </ButtonStyle>
       <PoemsContainer>
         {Object.keys(poems).map((poemKey) => (
-            <Poem key={poemKey} mode={mode} poem={poems[poemKey]} />
-          ))}
-      </PoemsContainer>    
+          <Poem key={poemKey} mode={mode} poem={poems[poemKey]} />
+        ))}
+      </PoemsContainer>
     </>
   )
 }
