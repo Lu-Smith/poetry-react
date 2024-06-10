@@ -222,7 +222,7 @@ const poems: PoemsCollectionType = {
         'Embrace it, for sorrow\'s cost is steep,',
         'Happiness is free—take it,',
         'In its embrace, let your spirit leap.',
-        'Isolation\'s price is way too high.'
+        'Isolation’s price is way too high.'
       ]
     }
   };
